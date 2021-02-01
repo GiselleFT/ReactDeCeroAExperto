@@ -2,7 +2,7 @@
 //imp
 import heroes, {owners} from '../data/heroes';
 
-console.log(owners);
+// console.log(owners);
 // console.log(heroes);
 
 //Find solo devuelve 1 elemento del arreglo
@@ -19,4 +19,9 @@ const getHeroesByOwner = (owner) => {
     return heroes.filter((heroe) => heroe.owner === owner);
 }
 
-console.log(getHeroesByOwner('DC'));
+// console.log(getHeroesByOwner('DC'));
+
+export{
+    getHeroeById,
+    getHeroesByOwner
+}

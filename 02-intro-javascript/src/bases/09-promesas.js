@@ -52,7 +52,7 @@ const getHeroeByIdAsync = (id) => {
 //     .catch(err => {console.log(err);});
 
 //Se imprime lo que devuelve resolve o reject
-getHeroeByIdAsync(10)
+getHeroeByIdAsync(1)
     .then(console.log)
     .catch(console.warn);
 
