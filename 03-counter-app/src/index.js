@@ -10,7 +10,7 @@ import './index.css';
 /*Se muestra en el root del index.html*/
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<PrimeraApp />, divRoot);
+ReactDOM.render(<PrimeraApp saludo="Hola, soy Giselle"/>, divRoot);
 
 
 
