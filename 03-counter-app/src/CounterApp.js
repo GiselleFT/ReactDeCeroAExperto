@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 //Tarea
 
-const CounterApp = ({value}) => {
+//Valor por defecto 6
+const CounterApp = ({value = 6}) => {
 
     /*useState devuelve un arreglo con dos valores: Valor, funcion 
     Se hace la desestructuración*/
     // const [nombre, setNombre] = useState('Giselle');
     // console.log(nombre, setNombre);
 
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(value);
 
 
     /*Función disparada en el evento onClick */
@@ -22,6 +23,15 @@ const CounterApp = ({value}) => {
         // setCounter((c) => c + 1 );
     }
 
+    /*Función resta */
+    const handleSubstract = () => {
+        setCounter(counter - 1);
+    }
+
+    /*Función resetea contador a 6 */
+    const handleReset = () => {
+        setCounter(value);
+    }
 
     return(
         <>
@@ -32,7 +42,10 @@ const CounterApp = ({value}) => {
             {/* <button onClick={function() {console.log('+1');}}>+1</button> */}
             {/* <button onClick={() => {console.log('+1');}}>+1</button> */}
             {/* <button onClick={(e) => {console.log(e);}}>+1</button> */}
+            <button onClick={handleSubstract}>-1</button>
+            <button onClick={handleReset}>Reset (6)</button>
             <button onClick={handleAdd}>+1</button>
+
         </>
     );
 
